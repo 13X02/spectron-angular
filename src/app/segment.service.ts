@@ -9,11 +9,12 @@ import { ResultModel } from './result-model';
 })
 export class SegmentService {
   getResult(): ResultModel | null {
-    throw new Error('Method not implemented.');
+    return this.result;
+
   }
 
   constructor(private http:HttpClient,private router: Router) { }
-  result:ResultModel|undefined;
+  result:ResultModel | null = null;
 
   processFile(imageInput: any): Promise<ImageSnippet>{
     const file: File = imageInput.files[0];

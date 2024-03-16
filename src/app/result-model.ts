@@ -1,5 +1,5 @@
 export interface ResultModel {
     numInstances: number;
-    instanceCount: {string: number};
+    instanceCounts: {[index:string]:number};
     processedImageURL: string;
 }
